@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal da E&E</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Controles de navegação: radios ocultos -->
+<input class="vh" type="radio" name="area" id="tab-inst" checked>
+<input class="vh" type="radio" name="area" id="tab-fun">
+<input class="vh" type="radio" name="area" id="tab-adm">
+<input class="vh" type="radio" name="sub-inst" id="si-home" checked>
+<input class="vh" type="radio" name="sub-inst" id="si-mural">
+<input class="vh" type="radio" name="sub-inst" id="si-manual">
+<input class="vh" type="radio" name="sub-fun" id="sf-refeicao" checked>
+<input class="vh" type="radio" name="sub-fun" id="sf-bazar">
+<input class="vh" type="radio" name="sub-fun" id="sf-reuniao">
+<input class="vh" type="radio" name="sub-fun" id="sf-formularios">
+<input class="vh" type="radio" name="sub-adm" id="sa-estoque" checked>
+<input class="vh" type="radio" name="sub-adm" id="sa-consumo">
+<input class="vh" type="radio" name="sub-adm" id="sa-impressao">
+<header class="topo">
+  <div>
+    <div class="titulo">E&E</div>
+    <div class="subtitulo">Portal da Empresa&Eficiente</div>
+  </div>
+</header>
+<nav class="abas-area">
+  <label for="tab-inst">🌊 Institucional</label>
+  <label for="tab-fun">👤 Painel do Funcionário</label>
+  <label for="tab-adm">📊 Painel do Administrador</label>
+</nav>
+<main>
+<!-- ================= INSTITUCIONAL ================= -->
+<div class="painel-area" id="painel-inst">
+  <div class="subnav">
+    <label for="si-home">Página inicial</label>
+    <label for="si-mural">Mural de conquistas</label>
+    <label for="si-manual">Manual de boas práticas</label>
+  </div>
+  <div class="subpainel" id="sp-home">
+    <div class="hero-inicial">
+      <div>
+        <h1>Menos desperdício, mais eficiência.</h1>
+        <p class="lead">
+          O Portal E&E reúne, em um só lugar, o que a empresa está fazendo pela sustentabilidade — e dá às equipes as ferramentas do dia a dia para reduzir desperdício de comida, papel, energia e água.
+        </p>
+        <ul class="objetivos">
+          <li>Reduzir 30% do desperdício de papel até dezembro</li>
+          <li>Cortar picos de consumo de energia por setor</li>
+          <li>Zerar sobras de refeição não planejadas no refeitório</li>
+          <li>Dar destino útil a insumos parados entre os setores</li>
+        </ul>
+      </div>
+      <div class="medidor-caixa">
+        <div class="legenda">
+          Impacto acumulado no ano
+        </div>
+        <svg viewBox="0 0 200 120" width="200" style="margin:0 auto;display:block;">
+          <path
+            d="M20 100 A80 80 0 0 1 180 100"
+            fill="none"
+            stroke="#123B6B"
+            stroke-width="14"
+            stroke-linecap="round"
+          />
+          <path
+            d="M20 100 A80 80 0 0 1 180 100"
+            fill="none"
+            stroke="#BFD7F2"
+            stroke-width="14"
+            stroke-linecap="round"
+            stroke-dasharray="251"
+            stroke-dashoffset="80"
+          />
+          <line
+            x1="100"
+            y1="100"
+            x2="100"
+            y2="35"
+            stroke="#D9A441"
+            stroke-width="4"
+            stroke-linecap="round"
+            transform="rotate(32 100 100)"
+          />
+          <circle
+            cx="100"
+            cy="100"
+            r="6"
+            fill="#D9A441"
+          />
+        </svg>
+        <div class="medidor-valor">
+          68%
+        </div>
+        <div class="legenda">
+          da meta anual de redução
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="subpainel" id="sp-mural">
+    <h2>Mural de conquistas — este mês</h2>
+    <p class="rodape-nota">
+      Comparado à média mensal do ano anterior.
+    </p>
+    <div class="grade">
+      <div class="cartao">
+        <div class="barra-item">
+          <div class="barra-topo">
+            <span>⚡ Energia economizada</span>
+            <span class="num">24%</span>
+          </div>
+          <div class="barra-fundo">
+            <div
+              class="barra-preenchida"
+              style="width:24%; background:var(--ambar);"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="cartao">
+        <div class="barra-item">
+          <div class="barra-topo">
+            <span>📄 Papel economizado</span>
+            <span class="num">41%</span>
+          </div>
+          <div class="barra-fundo">
+            <div
+              class="barra-preenchida"
+              style="width:41%;"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="cartao">
+        <div class="barra-item">
+          <div class="barra-topo">
+            <span>💧 Água economizada</span>
+            <span class="num">17%</span>
+          </div>
+          <div class="barra-fundo">
+            <div
+              class="barra-preenchida"
+              style="width:17%; background:#0A2540;"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="subpainel" id="sp-manual">
+    <h2>Manual de boas práticas</h2>
+    <div class="post">
+      <span class="etiqueta">Papel</span>
+      <h3>
+        Imprima só o que precisa mesmo ser impresso
+      </h3>
+      <p>
+        Antes de enviar para a impressora, pergunte-se: isso pode ficar só na tela? Use frente e verso como padrão. No mês passado conseguimos reduzir 41% nas impressões.
+      </p>
+    </div>
+    <div class="post">
+      <span class="etiqueta">Energia</span>
+      <h3>
+        Apague, desligue, desconecte
+      </h3>
+      <p>
+        Monitores e carregadores continuam consumindo energia em stand-by. Desligue tudo ao sair da sala. Setores que implementaram conseguiram economizar até 32%.
+      </p>
+    </div>
+    <div class="post">
+      <span class="etiqueta">Refeitório</span>
+      <h3>
+        Confirme sua presença até às 10h
+      </h3>
+      <p>
+        Confirmar o almoço com antecedência evita sobra de comida. Quem confirma ajuda o refeitório a planejar melhor.
+      </p>
+    </div>
+    <div class="post">
+      <span class="etiqueta">Água</span>
+      <h3>
+        Torneiras inteligentes e manutenção preventiva
+      </h3>
+      <p>
+        Verifique vazamentos. Um pequeno vazamento pode desperdiçar 46 mil litros por ano. Reporte problemas pelo formulário.
+      </p>
+    </div>
+    <div class="post">
+      <span class="etiqueta">Colaboração</span>
+      <h3>
+        Use o Bazar de Insumos antes de pedir compras
+      </h3>
+      <p>
+        Encontre o que precisa em outro setor. Economiza dinheiro e reduz desperdício. Sempre consulte antes.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- ================= FUNCIONÁRIO ================= -->
+<div class="painel-area" id="painel-fun">
+  <div class="subnav">
+    <label for="sf-refeicao">
+      Confirmação de refeição
+    </label>
+    <label for="sf-bazar">
+      Bazar de insumos
+    </label>
+    <label for="sf-reuniao">
+      Calculadora de reuniões
+    </label>
+    <label for="sf-formularios">
+      Formulários digitais
+    </label>
+  </div>
+  <!-- CONFIRMAÇÃO DE REFEIÇÃO -->
+  <div class="subpainel" id="sp-refeicao">
+    <h2>
+      Vou almoçar na empresa amanhã?
+    </h2>
+    <p class="rodape-nota">
+      Sua resposta ajuda o refeitório a preparar a quantidade exata.
+    </p>
+    <div class="escolha-refeicao">
+      <button
+        type="button"
+        id="ref-sim"
+      >
+        ✅ Sim, vou almoçar
+      </button>
+      <button
+        type="button"
+        id="ref-nao"
+      >
+        🚫 Não vou almoçar
+      </button>
+    </div>
+    <!-- Mensagem que será preenchida pelo JavaScript -->
+    <p
+      id="mensagem-refeicao"
+      class="confirmacao-envio"
+    ></p>
+    <p
+      id="contagem-refeicao"
+      class="rodape-nota"
+      style="margin-top:16px;"
+    ></p>
+    <div
+      id="historico-refeicoes"
+      style="margin-top:20px;"
+    ></div>
+  </div>
+  <!-- BAZAR -->
+  <div class="subpainel" id="sp-bazar">
+    <h2>
+      Bazar de insumos entre setores
+    </h2>
+    <p class="rodape-nota">
+      Material sobrando? Anuncie para outra equipe reaproveitar.
+    </p>
+    <div style="margin-bottom:16px;">
+      <label
+        class="rotulo"
+        for="busca-bazar"
+      >
+        Buscar por item ou setor
+      </label>
+      <input
+        type="text"
+        id="busca-bazar"
+        placeholder="ex: papel, TI, cabos..."
+      >
+    </div>
+    <div
+      class="lista-bazar"
+      id="lista-bazar"
+    ></div>
+    <h3 style="font-size:.95rem;">
+      Anunciar item sobrando
+    </h3>
+    <div class="form-inline">
+      <div>
+        <label
+          class="rotulo"
+          for="bazar-setor"
+        >
+          Setor
+        </label>
+        <select id="bazar-setor">
+          <option>RH</option>
+          <option>Financeiro</option>
+          <option>TI</option>
+          <option>Marketing</option>
+          <option>Operações</option>
+          <option>Comercial</option>
+        </select>
+      </div>
+      <div>
+        <label
+          class="rotulo"
+          for="bazar-qtd"
+        >
+          Quantidade
+        </label>
+        <input
+          type="text"
+          id="bazar-qtd"
+          placeholder="ex: 3 caixas"
+        >
+      </div>
+      <div>
+        <label
+          class="rotulo"
+          for="bazar-item"
+        >
+          Item
+        </label>
+        <input
+          type="text"
+          id="bazar-item"
+          placeholder="ex: Papel A4 sobrando"
+        >
+      </div>
+      <div>
+        <label class="rotulo">
+          &nbsp;
+        </label>
+        <button
+          class="btn"
+          id="btn-bazar-anunciar"
+          type="button"
+        >
+          Anunciar
+        </button>
+      </div>
+    </div>
+    <p
+      id="msg-bazar-enviado"
+      style="display:none;color:var(--safira);font-weight:600;font-size:.85rem;margin-top:10px;"
+    ></p>
+  </div>
+  <!-- CALCULADORA -->
+  <div class="subpainel" id="sp-reuniao">
+    <h2>
+      Calculadora de custo de reunião
+    </h2>
+    <p class="rodape-nota">
+      Veja o custo estimado antes de agendar.
+    </p>
+    <div class="calc-grid">
+      <div>
+        <label
+          class="rotulo"
+          for="calc-duracao"
+        >
+          Duração (minutos)
+        </label>
+        <input
+          type="number"
+          id="calc-duracao"
+          value="60"
+          min="1"
+        >
+      </div>
+      <div>
+        <label
+          class="rotulo"
+          for="calc-pessoas"
+        >
+          Número de pessoas
+        </label>
+        <input
+          type="number"
+          id="calc-pessoas"
+          value="6"
+          min="1"
+        >
+      </div>
+      <div>
+        <label
+          class="rotulo"
+          for="calc-valorhora"
+        >
+          Custo médio/hora por pessoa (R$)
+        </label>
+        <input
+          type="number"
+          id="calc-valorhora"
+          value="80"
+          min="1"
+        >
+      </div>
+    </div>
+    <div class="resultado-custo">
+      <div class="obs">
+        Custo estimado da reunião
+      </div>
+      <div
+        class="valor num"
+        id="resultado-valor"
+      >
+        R$ 480,00
+      </div>
+      <div
+        class="obs"
+        id="resultado-obs"
+      >
+        6 pessoas × 60 min × R$ 80,00/h
+      </div>
+    </div>
+  </div>
+  <!-- FORMULÁRIOS -->
+  <div class="subpainel" id="sp-formularios">
+    <h2>
+      Formulários digitais
+    </h2>
+    <p class="rodape-nota">
+      Substitua o papel. Clique no formulário para abrir.
+    </p>
+    <div
+      class="lista-formularios"
+      id="lista-formularios"
+    ></div>
+    <div
+      class="caixa-formulario"
+      id="caixa-formulario"
+      style="display:none;margin-top:20px;"
+    >
+      <h3
+        id="titulo-formulario"
+        style="font-size:.95rem;"
+      >
+        Formulário
+      </h3>
+      <label
+        class="rotulo"
+        for="form-descricao"
+      >
+        Descrição
+      </label>
+      <textarea
+        id="form-descricao"
+        placeholder="Descreva com detalhes..."
+      ></textarea>
+      <button
+        class="btn"
+        id="btn-enviar-form"
+        type="button"
+      >
+        Enviar
+      </button>
+      <button
+        class="btn contorno"
+        id="btn-cancelar-form"
+        type="button"
+      >
+        Cancelar
+      </button>
+      <p
+        class="confirmacao-envio"
+        id="confirmacao-formulario"
+      ></p>
+    </div>
+    <div
+      id="lista-formularios-enviados"
+      style="margin-top:20px;"
+    ></div>
+  </div>
+</div>
+<!-- ================= ADMINISTRADOR ================= -->
+<div class="painel-area" id="painel-adm">
+  <div class="subnav">
+    <label for="sa-estoque">
+      Estoque e validade
+    </label>
+    <label for="sa-consumo">
+      Gráficos de consumo
+    </label>
+    <label for="sa-impressao">
+      Relatório de impressão
+    </label>
+  </div>
+  <!-- ESTOQUE E VALIDADE -->
+  <div class="subpainel" id="sp-estoque">
+    <h2>
+      Estoque e validade
+    </h2>
+    <p class="rodape-nota">
+      Itens com validade próxima em destaque.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Setor</th>
+          <th>Qtd</th>
+          <th>Validade</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-estoque">
+        <tr>
+          <td>Café</td>
+          <td>Refeitório</td>
+          <td>12 kg</td>
+          <td>20/09/2026</td>
+          <td>🟢 Normal</td>
+        </tr>
+        <tr>
+          <td>Papel A4</td>
+          <td>Administrativo</td>
+          <td>25 caixas</td>
+          <td>—</td>
+          <td>🟢 Disponível</td>
+        </tr>
+        <tr>
+          <td>Leite</td>
+          <td>Refeitório</td>
+          <td>18 L</td>
+          <td>16/09/2026</td>
+          <td>🟡 Próximo</td>
+        </tr>
+        <tr>
+          <td>Toner preto</td>
+          <td>TI</td>
+          <td>4 unidades</td>
+          <td>—</td>
+          <td>🟢 Normal</td>
+        </tr>
+        <tr>
+          <td>Açúcar</td>
+          <td>Refeitório</td>
+          <td>8 kg</td>
+          <td>14/09/2026</td>
+          <td>🔴 Crítico</td>
+        </tr>
+        <tr>
+          <td>Produtos de limpeza</td>
+          <td>Operações</td>
+          <td>15 unidades</td>
+          <td>30/09/2026</td>
+          <td>🟢 Normal</td>
+        </tr>
+        <tr>
+          <td>Água mineral</td>
+          <td>Administrativo</td>
+          <td>40 garrafas</td>
+          <td>18/09/2026</td>
+          <td>🟡 Próximo</td>
+        </tr>
+        <tr>
+          <td>Canetas</td>
+          <td>RH</td>
+          <td>60 unidades</td>
+          <td>—</td>
+          <td>🟢 Disponível</td>
+        </tr>
+        <tr>
+          <td>Papel toalha</td>
+          <td>Refeitório</td>
+          <td>20 pacotes</td>
+          <td>25/09/2026</td>
+          <td>🟢 Normal</td>
+        </tr>
+        <tr>
+          <td>Detergente</td>
+          <td>Operações</td>
+          <td>10 unidades</td>
+          <td>13/09/2026</td>
+          <td>🔴 Vencido</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- CONSUMO -->
+  <div class="subpainel" id="sp-consumo">
+    <h2>
+      Consumo de energia e água por setor
+    </h2>
+    <p class="rodape-nota">
+      Monitoramento em tempo real. Setores em vermelho estão acima do padrão.
+    </p>
+    <div id="grafico-consumo-detalhado">
+      <div class="cartao">
+        <h3>Consumo por setor</h3>
+        <div class="barra-setor">
+          <span>Administrativo</span>
+          <div class="trilha"><div class="preenc" style="width:42%;"></div></div>
+          <span class="valor-setor num">42%</span>
+        </div>
+        <div class="barra-setor pico">
+          <span>Refeitório</span>
+          <div class="trilha"><div class="preenc" style="width:78%;"></div></div>
+          <span class="valor-setor num">78%</span>
+        </div>
+        <div class="barra-setor">
+          <span>TI</span>
+          <div class="trilha"><div class="preenc" style="width:56%;"></div></div>
+          <span class="valor-setor num">56%</span>
+        </div>
+        <div class="barra-setor">
+          <span>RH</span>
+          <div class="trilha"><div class="preenc" style="width:31%;"></div></div>
+          <span class="valor-setor num">31%</span>
+        </div>
+        <div class="barra-setor pico">
+          <span>Operações</span>
+          <div class="trilha"><div class="preenc" style="width:68%;"></div></div>
+          <span class="valor-setor num">68%</span>
+        </div>
+        <div class="barra-setor">
+          <span>Comercial</span>
+          <div class="trilha"><div class="preenc" style="width:47%;"></div></div>
+          <span class="valor-setor num">47%</span>
+        </div>
+        <p class="rodape-nota">Referência: consumo médio mensal. Vermelho indica consumo acima do padrão.</p>
+      </div>
+    </div>
+  </div>
+  <!-- IMPRESSÃO -->
+  <div class="subpainel" id="sp-impressao">
+    <h2>
+      Ranking de impressões por departamento
+    </h2>
+    <p class="rodape-nota">
+      Identifique gargalos e oportunidades de redução.
+    </p>
+    <div style="margin-bottom:16px;">
+      <label
+        class="rotulo"
+        for="filtro-impressoes"
+      >
+        Filtrar por
+      </label>
+      <select id="filtro-impressoes">
+        <option value="todos">
+          Todos os departamentos
+        </option>
+        <option value="critico">
+          Apenas críticos (> 3000)
+        </option>
+        <option value="normal">
+          Apenas normais (< 3000)
+        </option>
+      </select>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Posição</th>
+          <th>Departamento</th>
+          <th>Impressões/mês</th>
+          <th>Classificação</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-impressao"></tbody>
+    </table>
+  </div>
+</div>
+</main>
+<footer>
+  Portal E&E — Empresa & Eficiente. Gestão sustentável com tecnologia.
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
